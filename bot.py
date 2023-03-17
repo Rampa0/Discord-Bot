@@ -22,6 +22,24 @@ will = '<@264081824815251456>'
 jamal = '<@424447277197950977>'
 neil = '<@449368126853873664>'
 
+#counters for profit
+long long santiBuy = 0
+long long santiSell = 0
+long long zarrarBuy = 0
+long long zarrarSell = 0
+long long willBuy = 0
+long long willSell = 0
+long long jamalBuy = 0
+long long jamalSell = 0
+
+dict userChannelIds
+{
+
+
+
+}
+
+
 
 async def send_message(message, user_message, is_private):
     try:
@@ -131,5 +149,16 @@ def run_discord_bot():
 
         # await channel.send("Huge Bot back online")
         # await channel.send("Also, Fuck you Jamal")
+
+    @client.event
+    async def on_message(message):
+        text = message.content
+        author = message.author
+        index = text.index("Sniped For:")
+        sniped_index = string.index("Sniped For:") + len("Sniped For:")
+        sniped_price = string[sniped_index:].strip()
+        
+
+    
 
     client.run(TOKEN)
